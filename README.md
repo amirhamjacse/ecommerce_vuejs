@@ -36,8 +36,10 @@ npm run lint
 
 # Screenshoot
 
-![Alt text](/scr.png)
-![Alt text](/1.png)
-![Alt text](/3.png)
-![Alt text](/2.png)
-![Alt text](/4.png)
+![Alt text](screenshoot/1.png)
+![Alt text](screenshoot/3.png)
+![Alt text](screenshoot/2.png)
+![Alt text](screenshoot/4.png)
+![Alt text](screenshoot/5.png)
+![Alt text](screenshoot/6.png)
+![Alt text](screenshoot/7.png)
