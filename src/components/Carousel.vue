@@ -30,7 +30,7 @@
   
   <style scoped>
   .carousel {
-  margin-top: 70px; /* Adjust this value for top margin */
+  margin-top: 100px; /* Adjust this value for top margin */
 }
   /* Add any specific styles for carousel */
   </style>
