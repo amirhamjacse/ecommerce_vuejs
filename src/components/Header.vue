@@ -16,9 +16,20 @@
         <a class="navbar-brand ms-0" href="#">E-Shop</a>
 
         <!-- Categories Dropdown (Visible only on large screens) -->
-        <div class="nav-item dropdown hoverable d-none d-lg-block">
+        <div class="nav-item ms-4 dropdown hoverable d-none d-lg-block">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
             Categories
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><router-link to="/category/1" class="dropdown-item" @click="closeMenu">Category 1</router-link></li>
+            <li><router-link to="/category/2" class="dropdown-item" @click="closeMenu">Category 2</router-link></li>
+            <li><router-link to="/category/3" class="dropdown-item" @click="closeMenu">Category 3</router-link></li>
+          </ul>
+        </div>
+
+        <div class="nav-item ms-4 dropdown hoverable d-none d-lg-block">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
+            Products
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><router-link to="/category/1" class="dropdown-item" @click="closeMenu">Category 1</router-link></li>
