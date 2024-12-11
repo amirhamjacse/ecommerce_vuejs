@@ -1,8 +1,8 @@
 <template>
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
-      <div class="container-fluid">
-        <!-- Left Side Menu Button (always visible) -->
+      <div class="container">
+        <!-- Left Side Menu Button (always visible on small screens) -->
         <button
           class="menu-btn navbar-toggler"
           type="button"
@@ -12,13 +12,27 @@
           <i class="bi bi-list"></i>
         </button>
 
-        <a class="navbar-brand" href="#">E-Shop</a>
+        <!-- Logo (Aligned Left on small screens, centered on large screens) -->
+        <a class="navbar-brand ms-0" href="#">E-Shop</a>
 
-        <!-- Collapsable Menu for Larger Screens (Centered Search and Right-side Links) -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item mx-3 flex-grow-1">
-              <form class="d-flex">
+        <!-- Categories Dropdown (Visible only on large screens) -->
+        <div class="nav-item dropdown hoverable d-none d-lg-block">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
+            Categories
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><router-link to="/category/1" class="dropdown-item" @click="closeMenu">Category 1</router-link></li>
+            <li><router-link to="/category/2" class="dropdown-item" @click="closeMenu">Category 2</router-link></li>
+            <li><router-link to="/category/3" class="dropdown-item" @click="closeMenu">Category 3</router-link></li>
+          </ul>
+        </div>
+
+        <!-- Navbar for larger screens -->
+        <div class=" navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto d-flex align-items-center">
+            <!-- Search Box (Visible on both small and large screens) -->
+            <li class="nav-item mx-3">
+              <form class="d-flex w-100 col-md-4">
                 <input
                   class="form-control search-box"
                   type="search"
@@ -27,19 +41,23 @@
                 />
               </form>
             </li>
+
+            <!-- Cart Link (Visible on both small and large screens) -->
             <li class="nav-item">
+              <router-link to="/cart" class="nav-link">
+                <i class="bi bi-cart"></i> Cart
+              </router-link>
+            </li>
+
+            <!-- Login and Signup Links - Visible only on large screens -->
+            <li class="nav-item d-none d-lg-block">
               <router-link to="/login" class="nav-link">
                 <i class="bi bi-person"></i> Login
               </router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-none d-lg-block">
               <router-link to="/signup" class="nav-link">
                 <i class="bi bi-person-plus"></i> Signup
-              </router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/cart" class="nav-link">
-                <i class="bi bi-cart"></i> Cart
               </router-link>
             </li>
           </ul>
@@ -65,6 +83,18 @@
           </li>
           <li class="nav-item">
             <router-link to="/signup" class="nav-link" @click="closeMenu">Signup</router-link>
+          </li>
+
+          <!-- Category Link with Hoverable Dropdown -->
+          <li class="nav-item dropdown hoverable">
+            <a class="nav-link dropdown-toggle" href="#" id="sideNavbarDropdown" role="button" aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="sideNavbarDropdown">
+              <li><router-link to="/category/1" class="dropdown-item" @click="closeMenu">Category 1</router-link></li>
+              <li><router-link to="/category/2" class="dropdown-item" @click="closeMenu">Category 2</router-link></li>
+              <li><router-link to="/category/3" class="dropdown-item" @click="closeMenu">Category 3</router-link></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -122,7 +152,7 @@ export default {
 /* Search Box */
 .navbar .search-box {
   width: 100%;
-  max-width: 500px; /* Adjusted to be larger */
+  max-width: 500px;
   border-radius: 25px;
   padding: 15px 20px;
   font-size: 1rem;
@@ -175,18 +205,64 @@ export default {
   background-color: #444;
 }
 
+/* Hoverable Dropdown */
+.hoverable:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none; /* Hidden by default */
+}
+/* For mobile responsiveness */
+/* For mobile responsiveness */
 /* For mobile responsiveness */
 @media (max-width: 768px) {
+  /* Move logo to the left */
+  .navbar .navbar-brand {
+    margin-left: 0; /* Align logo to the left on small screens */
+    font-size: 1.25rem; /* Adjust logo size for mobile */
+  }
+
+  /* Navbar items (Logo, Search, Cart) in a horizontal row */
   .navbar-nav {
-    display: none; /* Hide default navbar items on small screens */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align to the left on small screens */
+    width: 100%; /* Ensure the navbar takes full width */
+    margin-left: 0; /* Remove any extra margin */
   }
 
+  /* Menu button */
   .menu-btn {
-    display: block; /* Show menu button on mobile */
+    display: block; /* Show the menu button on small screens */
   }
 
+  /* Make the search box smaller on small screens */
   .search-box {
-    max-width: 100%; /* Make the search box full width on smaller screens */
+    width: 120px; /* Set a smaller width for the search box on mobile */
+    margin-right: 10px; /* Add space between the search box and cart */
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  /* Ensure logo, search, and cart are in a row */
+  .navbar-nav > li {
+    margin-right: 15px; /* Provide space between items */
+  }
+
+  /* Hide Login and Signup on small screens */
+  .navbar-nav .nav-link.d-none.d-lg-block {
+    display: none;
+  }
+
+  /* Adjust cart icon size and alignment */
+  .nav-item i.bi-cart {
+    font-size: 1.25rem; /* Adjust cart icon size */
+  }
+
+  /* Adjust font size for the cart */
+  .navbar-nav .nav-link {
+    font-size: 0.9rem; /* Adjust font size of links */
   }
 }
+
 </style>
