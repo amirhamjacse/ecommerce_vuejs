@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- Slideable Image Banner -->
-    <div class="banner container-fluid">
+    <div class="banner container">
      <div class="carousel-size">
          <Carousel />
        </div>
@@ -56,8 +56,9 @@
       </div> -->
     <!-- See All Products Button -->
     <div class="d-flex justify-content-end mt-3">
-      <button class="btn btn-primary">See All Products</button>
-    </div>
+    <router-link to="/products" class="btn btn-primary">See All Products</router-link>
+  </div>
+
   </div>
 
     
@@ -259,9 +260,9 @@ export default {
 </script>
 
 <style scoped>
-.banner {
+/* .banner {
   margin-bottom: 2rem;
-}
+} */
 
 .categories, .deal-of-the-day, .best-selling, .featured-products {
   margin: 2rem 0;
@@ -279,14 +280,14 @@ export default {
   justify-content: center;
 }
 
-.carousel-size {
+/* .carousel-size {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 280px; /* Adjust as needed */
-  padding-right: 280px; /* Adjust as needed */
+  padding-left: 280px;
+  padding-right: 280px;
   max-width: 100%;
   box-sizing: border-box;
-}
+} */
 
 
 .product-card, .category-card {

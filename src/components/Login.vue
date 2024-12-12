@@ -1,5 +1,5 @@
 <template>
-    <div style="padding-top: 50px;" class="login container my-5">
+    <div style="" class="login container my-5">
       <h2 class="text-center">Login</h2>
       <form @submit.prevent="handleLogin" class="mt-4">
         <div class="mb-3">

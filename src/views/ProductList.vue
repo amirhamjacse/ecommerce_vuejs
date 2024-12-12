@@ -1,5 +1,5 @@
 <template>
-  <div class="product-list container-fluid">
+  <div class="product-list container">
     <h1>All Products</h1>
     <div class="row">
       <!-- Left Sidebar for Filters -->

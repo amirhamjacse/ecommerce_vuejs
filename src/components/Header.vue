@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
       <div class="container d-flex justify-content-between align-items-center">
         <!-- Logo -->
-        <a class="navbar-brand ms-0" href="#">E-Shop</a>
+        <a class="navbar-brand ms-0" href="/">E-Shop</a>
 
         <div class="nav-item ms-4 dropdown hoverable d-none d-lg-block">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
