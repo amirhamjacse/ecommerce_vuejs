@@ -30,8 +30,22 @@
   
   <style scoped>
   .carousel {
-  margin-top: 100px; /* Adjust this value for top margin */
-}
-  /* Add any specific styles for carousel */
+    margin-top: 30px; /* Default margin for medium to large screens */
+  }
+
+  /* Adjust for tablets and smaller screens */
+  @media screen and (max-width: 768px) {
+    .carousel {
+      margin-top: 60px; /* Reduce margin for tablets */
+    }
+  }
+
+  /* Adjust for phones */
+  @media screen and (max-width: 480px) {
+    .carousel {
+      margin-top: 65px; /* Minimal margin for small phones */
+    }
+  }
+
   </style>
   
