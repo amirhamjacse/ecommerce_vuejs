@@ -4,6 +4,7 @@
     <div class="row">
       <!-- Left Sidebar for Filters -->
       <div class="col-md-3 mb-4">
+        <!-- <div class="card p-4"> -->
         <div class="filters">
           <!-- Search Filter -->
           <div class="filter-group mb-3">
@@ -61,6 +62,7 @@
                 style="width: 100px;"
               />
             </div>
+          <!-- </div> -->
           </div>
 
           <!-- Price Range Slider -->
@@ -101,6 +103,7 @@
               <option value="nameDesc">Name (Z to A)</option>
             </select>
           </div>
+          
         </div>
 
         <div v-if="loading">
@@ -117,7 +120,7 @@
         </div>
 
         <!-- Pagination Controls -->
-        <div class="pagination d-flex justify-content-center mt-4">
+        <div class="pagination d-flex justify-content-center my-4">
           <button
             class="btn btn-primary"
             :disabled="currentPage === 1"
@@ -141,7 +144,7 @@
 
 <script>
 import axios from "axios";
-import ProductCard from "@/components/ProductCards.vue";
+import ProductCard from "@/components/ProductCardsList.vue";
 import SkeletonLoader from "@/components/SkeletonLoader.vue";
 
 export default {
