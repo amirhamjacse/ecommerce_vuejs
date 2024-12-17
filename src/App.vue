@@ -4,6 +4,7 @@
     <!-- <HeaderNav /> -->
     <router-view />
     <Footer />
+    <BottomNav />
   </div>
 </template>
 
@@ -11,12 +12,14 @@
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import HeaderNav from './components/HeaderNav.vue';
+import BottomNav from './components/BottomNav.vue';
 
 export default {
   components: {
     Header,
     Footer,
     HeaderNav,
+    BottomNav
   },
 };
 </script>
