@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="app-container">
     <Header />
+    <!-- <BreadCrum/> -->
     <!-- <HeaderNav /> -->
     <router-view />
     <Footer />
@@ -13,13 +14,15 @@ import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import HeaderNav from './components/HeaderNav.vue';
 import BottomNav from './components/BottomNav.vue';
+// import BreadCrum from './components/BreadCrum.vue';
 
 export default {
   components: {
     Header,
     Footer,
     HeaderNav,
-    BottomNav
+    BottomNav,
+    // BreadCrum
   },
 };
 </script>
