@@ -19,7 +19,7 @@
         </div>
         <div class="col-6 col-md-3">
           <p class="product-name">{{ item.name }}</p>
-          <p class="product-price">$ {{ item.price.toFixed(2) }}</p>
+          <p class="product-price"> {{ item.price.toFixed(2) }}৳</p>
         </div>
         <div class="col-6 col-md-4 d-flex justify-content-center align-items-center">
           <div class="quantity-controls d-flex align-items-center">
@@ -45,7 +45,7 @@
       </div>
 
       <div class="cart-total text-end mt-4">
-        <h4>Total: $ {{ total.toFixed(2) }}</h4>
+        <h4>Total:  {{ total.toFixed(2) }}৳</h4>
         <button class="btn btn-success" @click="goToCheckout">Proceed to Checkout</button>
       </div>
     </div>
