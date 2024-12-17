@@ -30,7 +30,7 @@
         <p class="text-muted mb-1">{{ product.category }}</p>
         <h6 class="card-title">{{ product.name }}</h6>
         <p class="card-text text-danger">
-          ${{ product.price }}
+          {{ product.price }}৳
           <span
             class="text-muted text-decoration-line-through"
             v-if="product.originalPrice"
