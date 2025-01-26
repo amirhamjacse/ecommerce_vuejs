@@ -62,7 +62,7 @@ export default {
 /* Padding for larger tablets */
   }
 }
-
+ 
 /* Extra Large Devices (larger than 1200px) */
 @media (min-width: 1200px) {
   .app-container {
